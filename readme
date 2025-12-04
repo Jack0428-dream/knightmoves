@@ -1,0 +1,40 @@
+A knight on a standard 8 x 8 chess board can move from any square to any other square
+- basic move : two steps forward and one stept to the side or one step forward and two steps to the side 
+- it can face any direction
+
+The chessboaed represented as a graph
+Each square on the board is a node (vertex)
+A knight's valid moves from any square represent the edges (or connections) between the vertices
+-> the problem of finding the shortest path for the knight's movement becomes a graph traversal problem
+
+-> The Goal : To traverse the graph(the chessboard) to find the shortest route between two nodes (the start and end positions)
+
+The vertices : each of the possible positions on the chessboard, 
+-> represented by a pair of coordinates like [x, y]
+where x and y are between 0 and 7 
+
+The edges : the valid knight moves between vertices 
+ex : a knight can move to [2, 1], [1, 2] and so on.
+moves represents a connections between the vertex
+
+Graph Representation 
+(you don’t need to explicitly create a graph object with vertices and edges)
+
+3 core ideas
+1. Represent positions as coordinates : Each square can be written as [x, y], 
+where both values range from 0 to 7.
+
+2. Use a queue: Like in tree BFS, 
+You'll use a queue to keep track of the next positions to explore
+
+3. Track visited positions : Unlike trees, graphics can revisit the same position through differnt paths
+- so be sure to track visited positions to avoid loops or unnecessary repeats
+
+Build a function "knightMoves" : shows the shortes possible way 
+to get from one square to another by outputting all squares 
+the knight will stop on along the way. 
+
+The board : 2-dimensional coordinates
+ex : knightMoves([0, 0], [1, 2]) // returns [[0, 0],[1, 2]]
+
+
