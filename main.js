@@ -52,10 +52,10 @@ function knightMoves(start, end) {
 
         for(let i = 0; i < queue.length; i++) {
             if(queue[i].current[0] === end[0] && queue[i].current[1] === end[1]) {
-                return queue[i].path;
+                let solution = `You made it in ${queue[i].length-1} moves! Here's your path:`;
+                return console.log(solution, queue[i].path);
             }
         } 
     }
 }
-
-console.log(knightMoves([0, 0], [7, 7])); 
+knightMoves([3, 3], [4, 3]);
