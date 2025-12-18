@@ -52,12 +52,10 @@ function knightMoves(start, end) {
 
         for(let i = 0; i < queue.length; i++) {
             if(queue[i].current[0] === end[0] && queue[i].current[1] === end[1]) {
-                return queue[i];
+                return queue[i].path;
             }
         } 
-
     }
-
 }
 
-console.log(knightMoves([3, 3], [3, 4])); 
+console.log(knightMoves([0, 0], [7, 7])); 
